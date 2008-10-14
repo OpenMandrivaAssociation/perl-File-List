@@ -19,7 +19,7 @@ directory and can return files (and/or directories if desired) matching a
 regular expression
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n File/List 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
