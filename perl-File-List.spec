@@ -1,17 +1,16 @@
 %define module   File-List
-%define version    0.3.1
-%define release    %mkrel 3
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
-Summary:    Perl extension for crawling directory trees and compiling lists of files
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/File/%{module}-%{version}.tar.gz
-BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+Name:		perl-%{module}
+Version:	0.3.1
+Release:	4
+License:	GPL or Artistic
+Group:		Development/Perl
+Summary:	Perl extension for crawling directory trees and compiling lists of files
+Url:		http://search.cpan.org/dist/%{module}
+Source:		http://www.cpan.org/modules/by-module/File/%{module}-%{version}.tar.gz
+
+BuildRequires:	perl-devel
+BuildArch:	noarch
 
 %description
 This module crawls the directory tree starting at the provided base
@@ -29,16 +28,27 @@ regular expression
 make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
 
 
+%changelog
+* Sun Apr 17 2011 Funda Wang <fwang@mandriva.org> 0.3.1-3mdv2011.0
++ Revision: 654187
+- rebuild for updated spec-helper
+
+* Mon Sep 14 2009 Thierry Vignaud <tv@mandriva.org> 0.3.1-2mdv2011.0
++ Revision: 440555
+- rebuild
+
+* Tue Oct 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.3.1-1mdv2009.1
++ Revision: 293677
+- import perl-File-List
+
+
+* Tue Oct 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.3.1-1mdv2009.1
+- initial mdv release, generated with cpan2dist
