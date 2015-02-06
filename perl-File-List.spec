@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	0.3.1
-Release:	5
+Release:	6
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl extension for crawling directory trees and compiling lists of files
