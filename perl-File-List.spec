@@ -6,7 +6,7 @@ Release:	6
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl extension for crawling directory trees and compiling lists of files
-Url:		http://search.cpan.org/dist/%{module}
+Url:		https://search.cpan.org/dist/%{module}
 Source:		http://www.cpan.org/modules/by-module/File/%{module}-%{version}.tar.gz
 
 BuildRequires:	perl-devel
